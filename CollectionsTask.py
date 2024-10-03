@@ -11,10 +11,16 @@ for i in range(num_of_dicts):
     new_dict = {}
 
     # Generate random letter keys and assign random values (0-100)
+    """
     for _ in range(num_of_keys):
         random_key = random.choice(string.ascii_lowercase)  # Random lowercase letter as key
         random_value = random.randint(0, 100)  # Random number between 0 and 100 as value
         new_dict[random_key] = random_value
+    """
+    while len(new_dict) < num_of_keys:
+        random_key = random.choice(string.ascii_lowercase)  # Chooses a random lowercase letter as key
+        random_value = random.randint(0, 100)  # Generates a random number between 0 and 100 as value
+        new_dict[random_key] = random_value  # Assigns key and value in the dictionary
 
     list_of_dicts.append(new_dict)  # Add the newly generated dict to the list
 
