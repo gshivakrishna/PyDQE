@@ -16,9 +16,9 @@ def normalize_case(text):
 
 
 # Function to fix "iZ" to "is" where it's incorrect
-def fix_misspelling(word):
+def fix_misspelling(text):
     """Replaces 'iZ' with 'is' in the text where appropriate."""
-    return re.sub(r'\b[iI][zZ]\b', 'is', word)  # Fix "iZ" or case variations
+    return re.sub(r'\b[iI][zZ]\b', 'is', text)  # Fix "iZ" or case variations
 
 
 # Function to fix misspellings across the entire text
@@ -54,7 +54,7 @@ def process_text(text):
     normalized_text = normalize_case(text)
 
     # Fix misspellings
-    corrected_text = correct_misspellings(normalized_text)
+    corrected_text = fix_misspelling(normalized_text)
 
     # Create a new sentence from last words
     last_word_sentence = create_last_word_sentence(corrected_text)
