@@ -21,12 +21,6 @@ def fix_misspelling(text):
     return re.sub(r'\b[iI][zZ]\b', 'is', text)  # Fix "iZ" or case variations
 
 
-# Function to fix misspellings across the entire text
-def correct_misspellings(text):
-    """Fixes all known misspellings in the text."""
-    return fix_misspelling(text)
-
-
 # Function to extract the last word from a sentence
 def extract_last_word(sentence):
     """Returns the last word of a given sentence."""
